@@ -9,7 +9,7 @@ function draw() {
   
 } */
 
-//color [] piet = {#000000, #ff0000, #ffff00, #0000ff};
+/* //color [] piet = {#000000, #ff0000, #ffff00, #0000ff};
 let piet = [];
 function setup(){
   //createCanvas(500, 500);
@@ -56,4 +56,43 @@ function keyPressed(){
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+} */
+
+
+let player = [];
+let xPos;
+let dir;
+
+function preload() {
+  player[0] = loadImage('data/left.png');
+  player[1] = loadImage('data/right.png');
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+} 
+
+function setup() {
+  createCanvas(500, 500);
+
+  xPos = 0;
+  dir = 0;
+}
+
+function draw() {
+  background(255);
+  image(player[dir], xPos, 400, 100, 100);
+}
+
+function keyPressed() {
+//  if ( key == CODED ) {
+    if ( keyCode == LEFT_ARROW ) {
+      xPos -= 10;
+      dir = 0;
+    }
+    else if ( keyCode == RIGHT_ARROW ) {
+      xPos += 10;
+      dir = 1;
+    }
+//  }
 }
