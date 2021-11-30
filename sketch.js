@@ -17,7 +17,8 @@ function setup(){
   piet = [color('#d1b912'), color('#2f271f'), color('#d9d07f'), color('#5e2c09')];
 
   background(255);
-  noLoop();
+  frameRate(2);
+  //noLoop();
 }
 
 function draw(){
