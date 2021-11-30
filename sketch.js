@@ -74,7 +74,6 @@ function windowResized() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
   xPos = 0;
   dir = 0;
 }
@@ -85,6 +84,16 @@ function draw() {
 }
 
 function mouseMoved(){
+  xPos = mouseX;
+  if (mouseX - pmouseX < 0){
+    dir = 0;
+  }
+  else{
+    dir = 1;
+  }
+}
+
+function touchMoved(){
   xPos = mouseX;
   if (mouseX - pmouseX < 0){
     dir = 0;
