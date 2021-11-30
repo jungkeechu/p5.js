@@ -73,7 +73,7 @@ function windowResized() {
 } 
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(windowWidth, windowHeight);
 
   xPos = 0;
   dir = 0;
@@ -81,7 +81,7 @@ function setup() {
 
 function draw() {
   background(255);
-  image(player[dir], xPos, 400, 100, 100);
+  image(player[dir], xPos, height-100, 100, 100);
 }
 
 function mouseMoved(){
