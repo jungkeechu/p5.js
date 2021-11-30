@@ -84,15 +84,24 @@ function draw() {
   image(player[dir], xPos, 400, 100, 100);
 }
 
-function keyPressed() {
-//  if ( key == CODED ) {
-    if ( keyCode == LEFT_ARROW ) {
-      xPos -= 10;
-      dir = 0;
-    }
-    else if ( keyCode == RIGHT_ARROW ) {
-      xPos += 10;
-      dir = 1;
-    }
-//  }
+function mouseMoved(){
+  xPos = mouseX;
+  if (mouseX - pmouseX < 0){
+    dir = 0;
+  }
+  else{
+    dir = 1;
+  }
 }
+// function keyPressed() {
+//   if ( key == CODED ) {
+//     if ( keyCode == LEFT_ARROW ) {
+//       xPos -= 10;
+//       dir = 0;
+//     }
+//     else if ( keyCode == RIGHT_ARROW ) {
+//       xPos += 10;
+//       dir = 1;
+//     }
+//   }
+// }
